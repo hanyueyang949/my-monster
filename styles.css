@@ -3,11 +3,19 @@ p {
 }
 
 .parrafo {
-    color :rgb(33, 33, 219) 
+        column-count: 2;
+  column-gap: 40px;
+    color :rgb(33, 33, 219); 
+    column-rule: 2px solid #000;
 }
 
 #titulo {
     font-family: 'courier new', courier, monospace; 
+}
+
+#welcome {
+    font-family: 'courier new', courier, monospace; 
+    font-size: 50px;
 }
 
 #footer {
@@ -31,12 +39,25 @@ li{
     list-style:square;
 }
 .ver_mas {
-    background-color:black;
+    background-color:rgb(171, 218, 61);
     color:darkred;
+}
+.speak {
+    background-color:rgb(209, 128, 90);
+    color:rgb(17, 16, 22);
+}
+
+.power {
+    background-color:rgb(175, 219, 175);
+    color:rgb(17, 16, 22);
+}
+.color {
+    background-color:rgb(231, 167, 167);
+    color:rgb(17, 16, 22);
 }
 
 .img_logo {
-    width: 90px;
+    width: 200px;
     height: auto;
 }
 
@@ -46,42 +67,123 @@ header, main {
     padding: 50px;
 }
 
-h1 {
-    text-align: center;
-}
 
 header {
     display: flex;
-    justify-content: space-between;
 }
 
 ul {
-    display : flex;
+    display :grid;
     gap: 20px;
-    padding: 0;
+     padding: 10px;
 }
 li {
     list-style: none;
 }
 
 .contenedor_carrito {
-    background-color: blue;
-padding: 10px;
+padding: 5px;
 position: relative;
 }
+.monster {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+}
+.body {
+  position: absolute;
+  left: 30px;
+  top: 100px;
+  width: 140px;
+  height: 120px;
+  background: #7b6fd6;
+  border-radius: 50%;
+  z-index: 1;
+}
 
-.globito {
-    width: 30px;
-    height: 30px;
-    margin:0;
-    border-radius: 15px;
-background-color: red;
-text-align: center;
-display: flex;
-position: absolute;
-justify-content: center;
-top: -10px;
-right: -10px;
+.head {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 120px;
+  height: 120px;
+  background: rgb(157, 80, 157);
+  border-radius: 50%;     
+  z-index: 2;   
+}          
+
+
+.lefteye {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+.righteye {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+.leftarm {
+  position: absolute;
+  top: 110px;
+  width: 25px;
+  height: 80px;
+  left: 0;  
+  background: purple;
+  border-radius: 12px;
+}
+
+.rightarm {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  width: 25px;
+  height: 80px;
+  background: purple;
+  border-radius: 12px;
+}
+
+.mouth {
+  position: absolute;
+  top: 80px;
+  left: 35px;
+  width: 50px;
+  height: 20px;
+  background: black;
+  border-radius: 0 0 50px 50px;
+}
+
+.leftleg {
+  position: absolute;
+  top: 220px;
+  left: 55px;
+  width: 25px;
+  height: 60px;
+  background: darkslateblue;
+  border-radius: 12px;
+}
+
+.rightleg {
+  position: absolute;
+  top: 220px;
+  left: 120px;
+  width: 25px;
+  height: 60px;
+  background: darkslateblue;
+  border-radius: 12px;
 }
 
 body{
@@ -96,4 +198,22 @@ header {
 
 main{
     flex: 1;
+}
+
+.monster div {
+  outline: 2px solid red;
+}
+
+.rightarm {
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.fire {
+    display: none;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+   position: fixed;  
+    z-index: 1;
 }
